@@ -1,0 +1,9 @@
+*.html
+*.xml
+*.json
+*.log
+*.png
+*.mp4
+*.lck
+allure-report
+node_configs

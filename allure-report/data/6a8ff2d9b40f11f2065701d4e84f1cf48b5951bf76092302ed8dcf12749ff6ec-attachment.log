@@ -1,0 +1,323 @@
+2016-02-10 18:57:13:004 - info: Welcome to Appium v1.4.16 (REV ae6877eff263066b26328d457bd285c0cc62430d)
+2016-02-10 18:57:13:007 - info: Appium REST http interface listener started on 0.0.0.0:4002
+2016-02-10 18:57:13:012 - info: [debug] Non-default server args: {"udid":"emulator-5556","port":4002,"bootstrapPort":2252,"log":"/Users/justin/repos/appium-mobile-grid/output/appium-emulator-5556.log","nodeconfig":"/Users/justin/repos/appium-mobile-grid/node_configs/emulator-5556.json","tmpDir":"/tmp/emulator-5556"}
+2016-02-10 18:57:13:013 - info: Console LogLevel: debug
+2016-02-10 18:57:13:015 - info: File LogLevel: debug
+2016-02-10 18:57:13:035 - info: [debug] starting auto register thread for grid. Will try to register every 5000 ms.
+2016-02-10 18:57:18:075 - info: [debug] Appium successfully registered with the grid on localhost:4444
+2016-02-10 18:57:20:001 - info: --> POST /wd/hub/session {"desiredCapabilities":{"app":"/Users/justin/repos/appium-mobile-grid/NotesList.apk","platformVersion":"4.3","deviceName":"android","platformName":"ANDROID","appium-version":"1.4.16","name":"Add Note Scenarios emulator-5556","udid":"emulator-5556"}}
+2016-02-10 18:57:20:036 - info: Client User-Agent string: appium/ruby_lib/8.0.2
+2016-02-10 18:57:20:042 - info: [debug] The following desired capabilities were provided, but not recognized by appium. They will be passed on to any other services running on this server. : appium-version, name
+2016-02-10 18:57:20:054 - info: [debug] No appActivity desired capability or server param. Parsing from apk.
+2016-02-10 18:57:20:055 - info: [debug] No appPackage desired capability or server param. Parsing from apk.
+2016-02-10 18:57:20:057 - info: [debug] Using local app from desired caps: /Users/justin/repos/appium-mobile-grid/NotesList.apk
+2016-02-10 18:57:20:145 - info: [debug] Creating new appium session 7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d
+2016-02-10 18:57:20:147 - info: Starting android appium
+2016-02-10 18:57:20:198 - info: [debug] Getting Java version
+2016-02-10 18:57:20:491 - info: Java version is: 1.7.0_79
+2016-02-10 18:57:20:495 - info: [debug] Checking whether adb is present
+2016-02-10 18:57:20:499 - info: [debug] Using adb from /Users/justin/Library/Android/sdk/platform-tools/adb
+2016-02-10 18:57:20:520 - info: [debug] Parsing package and activity from app manifest
+2016-02-10 18:57:20:522 - info: [debug] Checking whether aapt is present
+2016-02-10 18:57:20:523 - info: [debug] Using aapt from /Users/justin/Library/Android/sdk/build-tools/23.0.2/aapt
+2016-02-10 18:57:20:524 - info: [debug] Extracting package and launch activity from manifest.
+2016-02-10 18:57:20:529 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/build-tools/23.0.2/aapt dump badging /Users/justin/repos/appium-mobile-grid/NotesList.apk
+2016-02-10 18:57:20:568 - info: [debug] badging package: com.example.android.notepad
+2016-02-10 18:57:20:569 - info: [debug] badging act: com.example.android.notepad.NotesList
+2016-02-10 18:57:20:601 - info: [debug] Parsed package and activity are: com.example.android.notepad/com.example.android.notepad.NotesList
+2016-02-10 18:57:20:603 - info: [debug] Using fast reset? true
+2016-02-10 18:57:20:603 - info: [debug] Preparing device for session
+2016-02-10 18:57:20:605 - info: [debug] Checking whether app is actually present
+2016-02-10 18:57:20:613 - info: Retrieving device
+2016-02-10 18:57:20:613 - info: [debug] Trying to find a connected android device
+2016-02-10 18:57:20:615 - info: [debug] Getting connected devices...
+2016-02-10 18:57:20:617 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb devices
+2016-02-10 18:57:20:638 - info: [debug] 4 device(s) connected
+2016-02-10 18:57:20:639 - info: Found device emulator-5556
+2016-02-10 18:57:20:640 - info: [debug] Setting device id to emulator-5556
+2016-02-10 18:57:20:641 - info: [debug] Waiting for device to be ready and to respond to shell commands (timeout = 5)
+2016-02-10 18:57:20:642 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 wait-for-device
+2016-02-10 18:57:20:671 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "echo 'ready'"
+2016-02-10 18:57:20:706 - info: [debug] Starting logcat capture
+2016-02-10 18:57:20:728 - info: [debug] Getting device API level
+2016-02-10 18:57:20:728 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "getprop ro.build.version.sdk"
+2016-02-10 18:57:20:881 - info: [debug] Device is at API Level 22
+2016-02-10 18:57:20:881 - info: Device API level is: 22
+2016-02-10 18:57:20:883 - info: [debug] Extracting strings for language: default
+2016-02-10 18:57:20:884 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "getprop persist.sys.language"
+2016-02-10 18:57:21:079 - info: [debug] Current device persist.sys.language: en
+2016-02-10 18:57:21:080 - info: [debug] java -jar "/usr/local/lib/node_modules/appium/node_modules/appium-adb/jars/appium_apk_tools.jar" "stringsFromApk" "/Users/justin/repos/appium-mobile-grid/NotesList.apk" "/tmp/emulator-5556/com.example.android.notepad" en
+2016-02-10 18:57:21:563 - info: [debug] No strings.xml for language 'en', getting default strings.xml
+2016-02-10 18:57:21:564 - info: [debug] java -jar "/usr/local/lib/node_modules/appium/node_modules/appium-adb/jars/appium_apk_tools.jar" "stringsFromApk" "/Users/justin/repos/appium-mobile-grid/NotesList.apk" "/tmp/emulator-5556/com.example.android.notepad"
+2016-02-10 18:57:22:430 - info: [debug] Reading strings from converted strings.json
+2016-02-10 18:57:22:431 - info: [debug] Setting language to default
+2016-02-10 18:57:22:432 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 push "/tmp/emulator-5556/com.example.android.notepad/strings.json" /data/local/tmp
+2016-02-10 18:57:22:463 - info: [debug] Checking whether aapt is present
+2016-02-10 18:57:22:464 - info: [debug] Using aapt from /Users/justin/Library/Android/sdk/build-tools/23.0.2/aapt
+2016-02-10 18:57:22:464 - info: [debug] Retrieving process from manifest.
+2016-02-10 18:57:22:465 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/build-tools/23.0.2/aapt dump xmltree /Users/justin/repos/appium-mobile-grid/NotesList.apk AndroidManifest.xml
+2016-02-10 18:57:22:493 - info: [debug] Set app process to: com.example.android.notepad
+2016-02-10 18:57:22:494 - info: [debug] Not uninstalling app since server not started with --full-reset
+2016-02-10 18:57:22:496 - info: [debug] Checking app cert for /Users/justin/repos/appium-mobile-grid/NotesList.apk.
+2016-02-10 18:57:22:496 - info: [debug] executing cmd: java -jar /usr/local/lib/node_modules/appium/node_modules/appium-adb/jars/verify.jar /Users/justin/repos/appium-mobile-grid/NotesList.apk
+2016-02-10 18:57:22:835 - info: [debug] App already signed.
+2016-02-10 18:57:22:835 - info: [debug] Zip-aligning /Users/justin/repos/appium-mobile-grid/NotesList.apk
+2016-02-10 18:57:22:836 - info: [debug] Checking whether zipalign is present
+2016-02-10 18:57:22:837 - info: [debug] Using zipalign from /Users/justin/Library/Android/sdk/build-tools/23.0.2/zipalign
+2016-02-10 18:57:22:841 - info: [debug] Zip-aligning apk.
+2016-02-10 18:57:22:842 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/build-tools/23.0.2/zipalign -f 4 /Users/justin/repos/appium-mobile-grid/NotesList.apk /var/folders/j6/_bf_cvt13x5c8dsmr0ptsbxh0000gn/T/116110-3912-j6r6gc/appium.tmp
+2016-02-10 18:57:22:889 - info: [debug] MD5 for app is 12218e2c7c285ed41b788b542a7ea298
+2016-02-10 18:57:22:895 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "ls /data/local/tmp/12218e2c7c285ed41b788b542a7ea298.apk"
+2016-02-10 18:57:22:940 - info: [debug] Getting install status for com.example.android.notepad
+2016-02-10 18:57:22:941 - info: [debug] Getting device API level
+2016-02-10 18:57:22:942 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "getprop ro.build.version.sdk"
+2016-02-10 18:57:23:006 - info: [debug] Device is at API Level 22
+2016-02-10 18:57:23:009 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "pm list packages -3 com.example.android.notepad"
+2016-02-10 18:57:23:120 - info: --> GET /wd/hub/status {}
+2016-02-10 18:57:23:121 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:23:128 - info: <-- GET /wd/hub/status 200 8.540 ms - 156 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:23:242 - info: [debug] App is installed
+2016-02-10 18:57:23:243 - info: Installing App
+2016-02-10 18:57:23:245 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "mkdir -p /data/local/tmp/"
+2016-02-10 18:57:23:277 - info: [debug] Removing any old apks
+2016-02-10 18:57:23:280 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "ls /data/local/tmp/*.apk"
+2016-02-10 18:57:23:320 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell rm "/data/local/tmp/7253382da5e48cb84eb43ec7041ae5ac.apk"
+2016-02-10 18:57:23:352 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 push "/Users/justin/repos/appium-mobile-grid/NotesList.apk" /data/local/tmp/12218e2c7c285ed41b788b542a7ea298.apk
+2016-02-10 18:57:23:404 - info: [debug] Uninstalling com.example.android.notepad
+2016-02-10 18:57:23:405 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "am force-stop com.example.android.notepad"
+2016-02-10 18:57:23:767 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 uninstall com.example.android.notepad
+2016-02-10 18:57:24:519 - info: [debug] App was uninstalled
+2016-02-10 18:57:24:520 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "pm install -r /data/local/tmp/12218e2c7c285ed41b788b542a7ea298.apk"
+2016-02-10 18:57:25:751 - info: [debug] Forwarding system:2252 to device:4724
+2016-02-10 18:57:25:752 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 forward tcp:2252 tcp:4724
+2016-02-10 18:57:25:796 - info: [debug] Pushing appium bootstrap to device...
+2016-02-10 18:57:25:797 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 push "/usr/local/lib/node_modules/appium/build/android_bootstrap/AppiumBootstrap.jar" /data/local/tmp/
+2016-02-10 18:57:25:861 - info: [debug] Pushing settings apk to device...
+2016-02-10 18:57:25:863 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 install "/usr/local/lib/node_modules/appium/build/settings_apk/settings_apk-debug.apk"
+2016-02-10 18:57:26:146 - info: [debug] Pushing unlock helper app to device...
+2016-02-10 18:57:26:147 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 install "/usr/local/lib/node_modules/appium/build/unlock_apk/unlock_apk-debug.apk"
+2016-02-10 18:57:26:536 - info: Starting App
+2016-02-10 18:57:26:537 - info: [debug] Attempting to kill all 'uiautomator' processes
+2016-02-10 18:57:26:537 - info: [debug] Getting all processes with 'uiautomator'
+2016-02-10 18:57:26:538 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "ps 'uiautomator'"
+2016-02-10 18:57:26:572 - info: [debug] No matching processes found
+2016-02-10 18:57:26:572 - info: [debug] Running bootstrap
+2016-02-10 18:57:26:572 - info: [debug] spawning: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell uiautomator runtest AppiumBootstrap.jar -c io.appium.android.bootstrap.Bootstrap -e pkg com.example.android.notepad -e disableAndroidWatchers false
+2016-02-10 18:57:26:892 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: numtests=1
+2016-02-10 18:57:26:902 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: stream=
+2016-02-10 18:57:26:902 - info: [debug] [UIAUTOMATOR STDOUT] io.appium.android.bootstrap.Bootstrap:
+2016-02-10 18:57:26:903 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: id=UiAutomatorTestRunner
+2016-02-10 18:57:26:903 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: test=testRunServer
+2016-02-10 18:57:26:903 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: class=io.appium.android.bootstrap.Bootstrap
+2016-02-10 18:57:26:903 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS: current=1
+2016-02-10 18:57:26:904 - info: [debug] [UIAUTOMATOR STDOUT] INSTRUMENTATION_STATUS_CODE: 1
+2016-02-10 18:57:26:937 - info: [debug] [BOOTSTRAP] [debug] Socket opened on port 4724
+2016-02-10 18:57:26:950 - info: [debug] [BOOTSTRAP] [debug] Appium Socket Server Ready
+2016-02-10 18:57:26:951 - info: [debug] [BOOTSTRAP] [debug] Loading json...
+2016-02-10 18:57:26:951 - info: [debug] [BOOTSTRAP] [debug] json loading complete.
+2016-02-10 18:57:26:952 - info: [debug] [BOOTSTRAP] [debug] Registered crash watchers.
+2016-02-10 18:57:26:958 - info: [debug] Waking up device if it's not alive
+2016-02-10 18:57:26:958 - info: [debug] Pushing command to appium work queue: ["wake",{}]
+2016-02-10 18:57:26:964 - info: [debug] [BOOTSTRAP] [debug] Client connected
+2016-02-10 18:57:26:968 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"wake","params":{}}
+2016-02-10 18:57:26:969 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:26:969 - info: [debug] [BOOTSTRAP] [debug] Got command action: wake
+2016-02-10 18:57:26:971 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+2016-02-10 18:57:26:977 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "dumpsys window"
+2016-02-10 18:57:27:044 - info: Unlocking screen
+2016-02-10 18:57:27:044 - info: [debug] Screen is locked, trying to unlock
+2016-02-10 18:57:27:045 - info: [debug] Getting device API level
+2016-02-10 18:57:27:046 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "getprop ro.build.version.sdk"
+2016-02-10 18:57:27:092 - info: [debug] Device is at API Level 22
+2016-02-10 18:57:27:096 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "am start -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n io.appium.unlock/.Unlock"
+2016-02-10 18:57:27:367 - info: [debug] [BOOTSTRAP] [debug] Emitting system alert message
+2016-02-10 18:57:27:368 - info: [debug] Emitting alert message...
+2016-02-10 18:57:27:830 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "dumpsys window"
+2016-02-10 18:57:28:127 - info: [debug] Screen is unlocked, continuing
+2016-02-10 18:57:28:133 - info: [debug] Pushing command to appium work queue: ["getDataDir",{}]
+2016-02-10 18:57:28:158 - info: --> GET /wd/hub/status {}
+2016-02-10 18:57:28:160 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:28:163 - info: <-- GET /wd/hub/status 200 4.388 ms - 156 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:28:179 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"getDataDir","params":{}}
+2016-02-10 18:57:28:179 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:28:180 - info: [debug] [BOOTSTRAP] [debug] Got command action: getDataDir
+2016-02-10 18:57:28:180 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"\/data"}
+2016-02-10 18:57:28:182 - info: [debug] dataDir set to: /data
+2016-02-10 18:57:28:183 - info: [debug] Pushing command to appium work queue: ["compressedLayoutHierarchy",{"compressLayout":false}]
+2016-02-10 18:57:28:189 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"compressedLayoutHierarchy","params":{"compressLayout":false}}
+2016-02-10 18:57:28:189 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:28:190 - info: [debug] [BOOTSTRAP] [debug] Got command action: compressedLayoutHierarchy
+2016-02-10 18:57:28:194 - info: [debug] Getting device API level
+2016-02-10 18:57:28:195 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "getprop ro.build.version.sdk"
+2016-02-10 18:57:28:200 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":false}
+2016-02-10 18:57:28:263 - info: [debug] Device is at API Level 22
+2016-02-10 18:57:28:264 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "am start -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.example.android.notepad/com.example.android.notepad.NotesList"
+2016-02-10 18:57:29:243 - info: [debug] Waiting for pkg "com.example.android.notepad" and activity "com.example.android.notepad.NotesList" to be focused
+2016-02-10 18:57:29:244 - info: [debug] Getting focused package and activity
+2016-02-10 18:57:29:244 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "dumpsys window windows"
+2016-02-10 18:57:29:266 - info: --> GET /wd/hub/status {}
+2016-02-10 18:57:29:266 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:29:268 - info: <-- GET /wd/hub/status 200 2.041 ms - 156 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:30:136 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "getprop ro.build.version.release"
+2016-02-10 18:57:30:251 - info: [debug] Device is at release version 5.1.1
+2016-02-10 18:57:30:252 - info: [debug] Device launched! Ready for commands
+2016-02-10 18:57:30:253 - info: [debug] Setting command timeout to the default of 60 secs
+2016-02-10 18:57:30:254 - info: [debug] Appium session started with sessionId 7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d
+2016-02-10 18:57:30:256 - info: <-- POST /wd/hub/session 303 10255.362 ms - 74 
+2016-02-10 18:57:30:267 - info: --> GET /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d {}
+2016-02-10 18:57:30:269 - info: [debug] Responding to client with success: {"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"5.1.1","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"/Users/justin/repos/appium-mobile-grid/NotesList.apk","platformVersion":"4.3","deviceName":"android","platformName":"ANDROID","appium-version":"1.4.16","name":"Add Note Scenarios emulator-5556","udid":"emulator-5556"},"app":"/Users/justin/repos/appium-mobile-grid/NotesList.apk","deviceName":"emulator-5556","platformName":"ANDROID","appium-version":"1.4.16","name":"Add Note Scenarios emulator-5556","udid":"emulator-5556"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:30:270 - info: <-- GET /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d 200 3.146 ms - 759 {"status":0,"value":{"platform":"LINUX","browserName":"Android","platformVersion":"5.1.1","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"app":"/Users/justin/repos/appium-mobile-grid/NotesList.apk","platformVersion":"4.3","deviceName":"android","platformName":"ANDROID","appium-version":"1.4.16","name":"Add Note Scenarios emulator-5556","udid":"emulator-5556"},"app":"/Users/justin/repos/appium-mobile-grid/NotesList.apk","deviceName":"emulator-5556","platformName":"ANDROID","appium-version":"1.4.16","name":"Add Note Scenarios emulator-5556","udid":"emulator-5556"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:30:290 - info: --> POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/timeouts/implicit_wait {"ms":30000}
+2016-02-10 18:57:30:293 - info: [debug] Set Android implicit wait to 30000ms
+2016-02-10 18:57:30:294 - info: [debug] Responding to client with success: {"status":0,"value":null,"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:30:295 - info: <-- POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/timeouts/implicit_wait 200 4.610 ms - 76 {"status":0,"value":null,"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:30:312 - info: --> POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element {"using":"id","value":"android:id/action_bar_title"}
+2016-02-10 18:57:30:314 - info: [debug] Waiting up to 30000ms for condition
+2016-02-10 18:57:30:315 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"android:id/action_bar_title","context":"","multiple":false}]
+2016-02-10 18:57:30:367 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"android:id/action_bar_title","context":"","multiple":false}}
+2016-02-10 18:57:30:368 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:30:370 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2016-02-10 18:57:30:373 - info: [debug] [BOOTSTRAP] [debug] Finding android:id/action_bar_title using ID with the contextId:  multiple: false
+2016-02-10 18:57:30:373 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/action_bar_title]
+2016-02-10 18:57:30:988 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"1"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:30:991 - info: <-- POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element 200 679.004 ms - 87 {"status":0,"value":{"ELEMENT":"1"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:30:994 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"1"}}
+2016-02-10 18:57:31:040 - info: --> GET /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element/1/text {}
+2016-02-10 18:57:31:041 - info: [debug] Pushing command to appium work queue: ["element:getText",{"elementId":"1"}]
+2016-02-10 18:57:31:279 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getText","params":{"elementId":"1"}}
+2016-02-10 18:57:31:280 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:31:281 - info: [debug] [BOOTSTRAP] [debug] Got command action: getText
+2016-02-10 18:57:31:423 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"Notes"}
+2016-02-10 18:57:31:425 - info: [debug] Responding to client with success: {"status":0,"value":"Notes","sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:31:428 - info: <-- GET /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element/1/text 200 388.267 ms - 79 {"status":0,"value":"Notes","sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:31:451 - info: --> POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element {"using":"id","value":"com.example.android.notepad:id/menu_add"}
+2016-02-10 18:57:31:452 - info: [debug] Waiting up to 30000ms for condition
+2016-02-10 18:57:31:452 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.example.android.notepad:id/menu_add","context":"","multiple":false}]
+2016-02-10 18:57:31:467 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.example.android.notepad:id/menu_add","context":"","multiple":false}}
+2016-02-10 18:57:31:469 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:31:469 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2016-02-10 18:57:31:470 - info: [debug] [BOOTSTRAP] [debug] Finding com.example.android.notepad:id/menu_add using ID with the contextId:  multiple: false
+2016-02-10 18:57:31:470 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.example.android.notepad:id/menu_add]
+2016-02-10 18:57:31:471 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"2"}}
+2016-02-10 18:57:31:472 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"2"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:31:474 - info: <-- POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element 200 23.478 ms - 87 {"status":0,"value":{"ELEMENT":"2"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:31:500 - info: --> POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element/2/click {}
+2016-02-10 18:57:31:501 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"2"}]
+2016-02-10 18:57:31:507 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"2"}}
+2016-02-10 18:57:31:507 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:31:508 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
+2016-02-10 18:57:32:939 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+2016-02-10 18:57:32:942 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:32:943 - info: <-- POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element/2/click 200 1442.793 ms - 76 {"status":0,"value":true,"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:32:953 - info: --> POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element {"using":"id","value":"android:id/action_bar_title"}
+2016-02-10 18:57:32:954 - info: [debug] Waiting up to 30000ms for condition
+2016-02-10 18:57:32:954 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"android:id/action_bar_title","context":"","multiple":false}]
+2016-02-10 18:57:32:962 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"android:id/action_bar_title","context":"","multiple":false}}
+2016-02-10 18:57:32:962 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:32:963 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2016-02-10 18:57:32:963 - info: [debug] [BOOTSTRAP] [debug] Finding android:id/action_bar_title using ID with the contextId:  multiple: false
+2016-02-10 18:57:32:963 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/action_bar_title]
+2016-02-10 18:57:33:175 - info: --> GET /wd/hub/status {}
+2016-02-10 18:57:33:175 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:33:176 - info: <-- GET /wd/hub/status 200 1.654 ms - 156 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:33:614 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"3"}}
+2016-02-10 18:57:33:626 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"3"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:33:626 - info: <-- POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element 200 673.667 ms - 87 {"status":0,"value":{"ELEMENT":"3"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:33:636 - info: --> GET /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element/3/text {}
+2016-02-10 18:57:33:637 - info: [debug] Pushing command to appium work queue: ["element:getText",{"elementId":"3"}]
+2016-02-10 18:57:33:642 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getText","params":{"elementId":"3"}}
+2016-02-10 18:57:33:642 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:33:643 - info: [debug] [BOOTSTRAP] [debug] Got command action: getText
+2016-02-10 18:57:33:880 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"New note"}
+2016-02-10 18:57:33:884 - info: [debug] Responding to client with success: {"status":0,"value":"New note","sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:33:884 - info: <-- GET /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element/3/text 200 248.267 ms - 82 {"status":0,"value":"New note","sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:35:249 - info: --> POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element {"using":"id","value":"com.example.android.notepad:id/note"}
+2016-02-10 18:57:35:250 - info: [debug] Waiting up to 30000ms for condition
+2016-02-10 18:57:35:250 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.example.android.notepad:id/note","context":"","multiple":false}]
+2016-02-10 18:57:35:260 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.example.android.notepad:id/note","context":"","multiple":false}}
+2016-02-10 18:57:35:260 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:35:260 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2016-02-10 18:57:35:260 - info: [debug] [BOOTSTRAP] [debug] Finding com.example.android.notepad:id/note using ID with the contextId:  multiple: false
+2016-02-10 18:57:35:260 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.example.android.notepad:id/note]
+2016-02-10 18:57:35:269 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"4"}}
+2016-02-10 18:57:35:270 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"4"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:35:271 - info: <-- POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element 200 22.043 ms - 87 {"status":0,"value":{"ELEMENT":"4"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:35:294 - info: --> POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element/4/value {"value":["Sapiente alias accusamus autem assumenda beatae vero quo."]}
+2016-02-10 18:57:35:295 - info: [debug] Pushing command to appium work queue: ["element:setText",{"elementId":"4","text":"Sapiente alias accusamus autem assumenda beatae vero quo.","replace":false}]
+2016-02-10 18:57:35:300 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:setText","params":{"elementId":"4","text":"Sapiente alias accusamus autem assumenda beatae vero quo.","replace":false}}
+2016-02-10 18:57:35:300 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:35:300 - info: [debug] [BOOTSTRAP] [debug] Got command action: setText
+2016-02-10 18:57:35:300 - info: [debug] [BOOTSTRAP] [debug] Using element passed in.
+2016-02-10 18:57:35:310 - info: [debug] [BOOTSTRAP] [debug] Attempting to clear using UiObject.clearText().
+2016-02-10 18:57:37:826 - info: [debug] [BOOTSTRAP] [debug] Sending plain text to element: Sapiente alias accusamus autem assumenda beatae vero quo.
+2016-02-10 18:57:38:193 - info: --> GET /wd/hub/status {}
+2016-02-10 18:57:38:194 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:38:196 - info: <-- GET /wd/hub/status 200 2.905 ms - 156 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:43:216 - info: --> GET /wd/hub/status {}
+2016-02-10 18:57:43:217 - info: [debug] Responding to client with success: {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:43:218 - info: <-- GET /wd/hub/status 200 7.093 ms - 156 {"status":0,"value":{"build":{"version":"1.4.16","revision":"ae6877eff263066b26328d457bd285c0cc62430d"}},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:43:752 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+2016-02-10 18:57:43:754 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:43:756 - info: <-- POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element/4/value 200 8461.502 ms - 76 {"status":0,"value":true,"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:43:776 - info: --> POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element {"using":"id","value":"com.example.android.notepad:id/menu_save"}
+2016-02-10 18:57:43:777 - info: [debug] Waiting up to 30000ms for condition
+2016-02-10 18:57:43:777 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"com.example.android.notepad:id/menu_save","context":"","multiple":false}]
+2016-02-10 18:57:43:808 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"com.example.android.notepad:id/menu_save","context":"","multiple":false}}
+2016-02-10 18:57:43:808 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:43:808 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2016-02-10 18:57:43:809 - info: [debug] [BOOTSTRAP] [debug] Finding com.example.android.notepad:id/menu_save using ID with the contextId:  multiple: false
+2016-02-10 18:57:43:809 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=com.example.android.notepad:id/menu_save]
+2016-02-10 18:57:43:897 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"5"}}
+2016-02-10 18:57:43:900 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"5"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:43:904 - info: <-- POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element 200 126.529 ms - 87 {"status":0,"value":{"ELEMENT":"5"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:43:931 - info: --> POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element/5/click {}
+2016-02-10 18:57:43:932 - info: [debug] Pushing command to appium work queue: ["element:click",{"elementId":"5"}]
+2016-02-10 18:57:43:948 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:click","params":{"elementId":"5"}}
+2016-02-10 18:57:43:948 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:43:948 - info: [debug] [BOOTSTRAP] [debug] Got command action: click
+2016-02-10 18:57:44:461 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":true}
+2016-02-10 18:57:44:462 - info: [debug] Responding to client with success: {"status":0,"value":true,"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:44:486 - info: <-- POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element/5/click 200 555.085 ms - 76 {"status":0,"value":true,"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:44:493 - info: --> POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element {"using":"id","value":"android:id/action_bar_title"}
+2016-02-10 18:57:44:493 - info: [debug] Waiting up to 30000ms for condition
+2016-02-10 18:57:44:494 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"android:id/action_bar_title","context":"","multiple":false}]
+2016-02-10 18:57:44:503 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"android:id/action_bar_title","context":"","multiple":false}}
+2016-02-10 18:57:44:503 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:44:504 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2016-02-10 18:57:44:504 - info: [debug] [BOOTSTRAP] [debug] Finding android:id/action_bar_title using ID with the contextId:  multiple: false
+2016-02-10 18:57:44:505 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/action_bar_title]
+2016-02-10 18:57:44:967 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"6"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:44:971 - info: <-- POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element 200 477.326 ms - 87 {"status":0,"value":{"ELEMENT":"6"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:44:971 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"6"}}
+2016-02-10 18:57:44:985 - info: --> GET /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element/6/text {}
+2016-02-10 18:57:44:986 - info: [debug] Pushing command to appium work queue: ["element:getText",{"elementId":"6"}]
+2016-02-10 18:57:44:992 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getText","params":{"elementId":"6"}}
+2016-02-10 18:57:44:992 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:44:992 - info: [debug] [BOOTSTRAP] [debug] Got command action: getText
+2016-02-10 18:57:45:039 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"Notes"}
+2016-02-10 18:57:45:042 - info: [debug] Responding to client with success: {"status":0,"value":"Notes","sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:45:043 - info: <-- GET /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element/6/text 200 57.959 ms - 79 {"status":0,"value":"Notes","sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:45:051 - info: --> POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element {"using":"id","value":"android:id/text1"}
+2016-02-10 18:57:45:052 - info: [debug] Waiting up to 30000ms for condition
+2016-02-10 18:57:45:053 - info: [debug] Pushing command to appium work queue: ["find",{"strategy":"id","selector":"android:id/text1","context":"","multiple":false}]
+2016-02-10 18:57:45:060 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"find","params":{"strategy":"id","selector":"android:id/text1","context":"","multiple":false}}
+2016-02-10 18:57:45:060 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:45:060 - info: [debug] [BOOTSTRAP] [debug] Got command action: find
+2016-02-10 18:57:45:061 - info: [debug] [BOOTSTRAP] [debug] Finding android:id/text1 using ID with the contextId:  multiple: false
+2016-02-10 18:57:45:061 - info: [debug] [BOOTSTRAP] [debug] Using: UiSelector[INSTANCE=0, RESOURCE_ID=android:id/text1]
+2016-02-10 18:57:45:067 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":{"ELEMENT":"7"}}
+2016-02-10 18:57:45:069 - info: [debug] Responding to client with success: {"status":0,"value":{"ELEMENT":"7"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:45:070 - info: <-- POST /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element 200 18.700 ms - 87 {"status":0,"value":{"ELEMENT":"7"},"sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:45:080 - info: --> GET /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element/7/text {}
+2016-02-10 18:57:45:081 - info: [debug] Pushing command to appium work queue: ["element:getText",{"elementId":"7"}]
+2016-02-10 18:57:45:095 - info: [debug] [BOOTSTRAP] [debug] Got data from client: {"cmd":"action","action":"element:getText","params":{"elementId":"7"}}
+2016-02-10 18:57:45:097 - info: [debug] [BOOTSTRAP] [debug] Got command of type ACTION
+2016-02-10 18:57:45:097 - info: [debug] [BOOTSTRAP] [debug] Got command action: getText
+2016-02-10 18:57:45:140 - info: [debug] Responding to client with success: {"status":0,"value":"Sapiente alias accusamus autem assumenda beatae vero quo.","sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:45:141 - info: <-- GET /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/element/7/text 200 60.510 ms - 131 {"status":0,"value":"Sapiente alias accusamus autem assumenda beatae vero quo.","sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:45:141 - info: [debug] [BOOTSTRAP] [debug] Returning result: {"status":0,"value":"Sapiente alias accusamus autem assumenda beatae vero quo."}
+2016-02-10 18:57:45:251 - info: --> GET /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/screenshot {}
+2016-02-10 18:57:45:254 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 shell "/system/bin/rm /data/local/tmp/screenshot.png; /system/bin/screencap -p /data/local/tmp/screenshot.png "
+2016-02-10 18:57:45:778 - info: [debug] executing cmd: /Users/justin/Library/Android/sdk/platform-tools/adb -s emulator-5556 pull /data/local/tmp/screenshot.png "/var/folders/j6/_bf_cvt13x5c8dsmr0ptsbxh0000gn/T/appium116110-3912-vpzx8k.png"
+2016-02-10 18:57:45:896 - info: [debug] Responding to client with success: {"status":0,"value":"iVBORw0KGgoAAAANSUhEUgAAAeAAAAMgCAYAAAD7o7EIAAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3Xl8FOXhx/HvbDYHCSHc5UgECRAKBeQHEkFBBA+KF15QrcWKZ7XeUq3F+ygoVKgttkIVingiIgULKIKgwQsUBRSQq6AcJiQkXCG7M78/NjvskjvZ7BPg83699mXcmXn22dlhv/s888wzliRHAAAgqjymKwAAwImIAAYAwAACGAAAAwhgAAAMIIABADCAAAYAwACv6QoAAI4fffv2VUpKSthze/fu1apVq7R//35DtaqbCGAAOAakpaXpiiuuUH5+vt544w3l5+e7y7p06aLzzjtP27Zt04IFC8KWVVaXLl20Zs2aGtczJSVFjRs3LvF8TExMjcs+3lhiIg4AqNPS0tL0ySefqKCgQMnJydq2bZvOPfdc5efn69FHH9X111/vrrtmzRqde+65VSq/S5cuatWqld57770q1+3oFm+DBg3k9Ya37Xw+n/bv3y+/3y8p0CLOysqq8msdbzgHDAB13LBhwyRJ55xzju666y6lpaWpb9++SktL0/XXX6+1a9fq5z//ua677jp16dJFffr0qXTZwfCtrmCLN/g4Onwlyev1hq13dBf1iYoABoA6bvz48WrdurW2bdsW1r2cmpoqSZo/f77y8/O1Zs0a/eUvf6l0F3RNwxc1wzlgADhGzJw5U126dNHy5cs1f/78sJZuWlqaUlNTlZWVVakArq3w3bFjh3bs2KGioqKw55s3b67U1FTFxsZG5HUuueQSXXTRRUpPT1f//v2rtO2DDz6oESNGlLl88eLFuvHGG3X11Vfr4YcfrlSZ/fr1086dO6tUDwIYAI4Ry5cvV1pamrp06aK0tLSwZcOGDdPdd98tSfrLX/6i8ePHl1nORRddpIMHD9ZKHXfs2KEtW7bI5/O5zyUlJalNmzY1HojVu3dvXXHFFRo0aJB+9rOfSZJ27dpV5XJS...","sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}
+2016-02-10 18:57:45:900 - info: <-- GET /wd/hub/session/7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d/screenshot 200 648.708 ms - 23194 {"status":0,"value":"iVBORw0KGgoAAAANSUhEUgAAAeAAAAMgCAYAAAD7o7EIAAAABHNCSVQICAgIfAhkiAAAIABJREFUeJzs3Xl8FOXhx/HvbDYHCSHc5UgECRAKBeQHEkFBBA+KF15QrcWKZ7XeUq3F+ygoVKgttkIVingiIgULKIKgwQsUBRSQq6AcJiQkXCG7M78/NjvskjvZ7BPg83699mXcmXn22dlhv/s888wzliRHAAAgqjymKwAAwImIAAYAwAACGAAAAwhgAAAMIIABADCAAAYAwACv6QoAAI4fffv2VUpKSthze/fu1apVq7R//35DtaqbCGAAOAakpaXpiiuuUH5+vt544w3l5+e7y7p06aLzzjtP27Zt04IFC8KWVVaXLl20Zs2aGtczJSVFjRs3LvF8TExMjcs+3lhiIg4AqNPS0tL0ySefqKCgQMnJydq2bZvOPfdc5efn69FHH9X111/vrrtmzRqde+65VSq/S5cuatWqld57770q1+3oFm+DBg3k9Ya37Xw+n/bv3y+/3y8p0CLOysqq8msdbzgHDAB13LBhwyRJ55xzju666y6lpaWpb9++SktL0/XXX6+1a9fq5z//ua677jp16dJFffr0qXTZwfCtrmCLN/g4Onwlyev1hq13dBf1iYoABoA6bvz48WrdurW2bdsW1r2cmpoqSZo/f77y8/O1Zs0a/eUvf6l0F3RNwxc1wzlgADhGzJw5U126dNHy5cs1f/78sJZuWlqaUlNTlZWVVakArq3w3bFjh3bs2KGioqKw55s3b67U1FTFxsZG5HUuueQSXXTRRUpPT1f//v2rtO2DDz6oESNGlLl88eLFuvHGG3X11Vfr4YcfrlSZ/fr1086dO6tUDwIYAI4Ry5cvV1pamrp06aK0tLSwZcOGDdPdd98tSfrLX/6i8ePHl1nORRddpIMHD9ZKHXfs2KEtW7bI5/O5zyUlJalNmzY1HojVu3dvXXHFFRo0aJB+9rOfSZJ27dpV5XJS...","sessionId":"7a5e11ec-51fb-4fd8-87b7-3fde1cdce76d"}

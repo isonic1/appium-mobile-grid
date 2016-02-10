@@ -1,0 +1,74 @@
+{
+  "uid" : "72e8c7608be4d147",
+  "name" : "Add Note Scenarios emulator-5558 Create A Note",
+  "title" : "Add Note Scenarios emulator-5558 Create A Note",
+  "time" : {
+    "start" : 1455130651951,
+    "stop" : 1455130664794,
+    "duration" : 12843
+  },
+  "summary" : {
+    "attachments" : 4,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "\nexpected: \"fail_on_purpose\"\n     got: \"Odit fuga voluptatibus qui in.\"\n\n(compared using ==)\n",
+    "stackTrace" : "/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-support-3.4.1/lib/rspec/support.rb:87:in `block in <module:Support>'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-support-3.4.1/lib/rspec/support.rb:96:in `call'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-support-3.4.1/lib/rspec/support.rb:96:in `notify_failure'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-expectations-3.4.0/lib/rspec/expectations/fail_with.rb:27:in `fail_with'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-expectations-3.4.0/lib/rspec/expectations/handler.rb:38:in `handle_failure'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-expectations-3.4.0/lib/rspec/expectations/handler.rb:50:in `block in handle_matcher'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-expectations-3.4.0/lib/rspec/expectations/handler.rb:27:in `with_matcher'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-expectations-3.4.0/lib/rspec/expectations/handler.rb:48:in `handle_matcher'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-expectations-3.4.0/lib/rspec/expectations/expectation_target.rb:54:in `to'\r\n/Users/justin/repos/appium-mobile-grid/spec/add_note_spec.rb:16:in `block (2 levels) in <top (required)>'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/example.rb:236:in `instance_exec'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/example.rb:236:in `block in run'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/example.rb:478:in `block in with_around_and_singleton_context_hooks'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/example.rb:435:in `block in with_around_example_hooks'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/hooks.rb:478:in `block in run'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/hooks.rb:616:in `run_around_example_hooks_for'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/hooks.rb:478:in `run'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/allure-rspec-0.7.7/lib/allure-rspec/hooks.rb:33:in `run'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/example.rb:435:in `with_around_example_hooks'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/example.rb:478:in `with_around_and_singleton_context_hooks'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/example.rb:233:in `run'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/example_group.rb:581:in `block in run_examples'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/example_group.rb:577:in `map'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/example_group.rb:577:in `run_examples'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/example_group.rb:543:in `run'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/runner.rb:119:in `block (3 levels) in run_specs'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/runner.rb:119:in `map'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/runner.rb:119:in `block (2 levels) in run_specs'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/configuration.rb:1680:in `with_suite_hooks'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/runner.rb:118:in `block in run_specs'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/reporter.rb:77:in `report'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/runner.rb:117:in `run_specs'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/runner.rb:93:in `run'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/runner.rb:78:in `run'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/lib/rspec/core/runner.rb:45:in `invoke'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/gems/rspec-core-3.4.2/exe/rspec:4:in `<top (required)>'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/bin/rspec:23:in `load'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/bin/rspec:23:in `<main>'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/bin/ruby_executable_hooks:15:in `eval'\r\n/Users/justin/.rvm/gems/ruby-2.2.2/bin/ruby_executable_hooks:15:in `<main>'"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "fa5eafe710a07248",
+    "name" : "Add Note Scenarios emulator-5558",
+    "title" : "Add Note Scenarios emulator-5558"
+  },
+  "steps" : [ ],
+  "attachments" : [ {
+    "title" : "Hub Log: emulator-5558",
+    "source" : "1aa9bff914838786dc4d8f64339e384bca56991609bb86808ac71f4fc8c178ae-attachment.log",
+    "type" : "text/x-log",
+    "size" : 3879,
+    "uid" : "21bcd1ad87f7ef2f"
+  }, {
+    "title" : "appium-emulator",
+    "source" : "78498149d35739cc28a3a0114040c3fb00fd2330a5b31ae59ed0d3e20cca8306-attachment.log",
+    "type" : "text/x-log",
+    "size" : 40882,
+    "uid" : "6bafc7f1891d6d64"
+  }, {
+    "title" : "logcat-emulator-5558",
+    "source" : "7fde7d24e89d9302a979cf049cecf7a2606a99a2fb247eba08c02a9fa13e76bb-attachment.log",
+    "type" : "text/x-log",
+    "size" : 338164,
+    "uid" : "7ea043062f687bc9"
+  }, {
+    "title" : "screenshot-emulator-5558",
+    "source" : "222e5a7747ea6a57c0cdd3d999d6ca6a882a95d0a9f22b4ae8b4d706f8a2ae52-attachment.png",
+    "type" : "image/png",
+    "size" : 18572,
+    "uid" : "f6d1a6f1b3fcaf12"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "70270454997500"
+  }, {
+    "name" : "host",
+    "value" : "justin-2.home"
+  }, {
+    "name" : "suite-name",
+    "value" : "Add Note Scenarios emulator-5558"
+  }, {
+    "name" : "suite-title",
+    "value" : "Add Note Scenarios emulator-5558"
+  }, {
+    "name" : "thread",
+    "value" : "70270454997500"
+  }, {
+    "name" : "host",
+    "value" : "justin-2.home"
+  } ],
+  "parameters" : [ ]
+}

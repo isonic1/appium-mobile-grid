@@ -1,0 +1,94 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    allure-rspec (0.7.7)
+      allure-ruby-adaptor-api (= 0.6.10)
+      rspec (~> 3.2)
+    allure-ruby-adaptor-api (0.6.10)
+      mimemagic
+      nokogiri (~> 1.6.0)
+      uuid
+    appium_lib (8.0.2)
+      awesome_print (~> 1.6)
+      json (~> 1.8)
+      nokogiri (~> 1.6.6)
+      selenium-webdriver (~> 2.49)
+      tomlrb (~> 1.1)
+    awesome_print (1.6.1)
+    builder (3.2.2)
+    childprocess (0.5.9)
+      ffi (~> 1.0, >= 1.0.11)
+    diff-lcs (1.2.5)
+    domain_name (0.5.20160128)
+      unf (>= 0.0.5, < 1.0.0)
+    faker (1.6.1)
+      i18n (~> 0.5)
+    ffi (1.9.10)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
+    i18n (0.7.0)
+    json (1.8.3)
+    macaddr (1.7.1)
+      systemu (~> 2.6.2)
+    mime-types (2.99)
+    mimemagic (0.3.1)
+    mini_portile2 (2.0.0)
+    multi_json (1.11.2)
+    netrc (0.11.0)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
+    parallel (1.6.1)
+    parallel_tests (2.3.1)
+      parallel
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.2)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
+    rspec_junit_formatter (0.2.3)
+      builder (< 4)
+      rspec-core (>= 2, < 4, != 2.12.0)
+    rubyzip (1.1.7)
+    sauce_whisk (0.0.18)
+      json (~> 1.8.1)
+      rest-client (~> 1.7)
+    selenium-webdriver (2.51.0)
+      childprocess (~> 0.5)
+      multi_json (~> 1.0)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0)
+    systemu (2.6.5)
+    tomlrb (1.2.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
+    uuid (2.3.8)
+      macaddr (~> 1.0)
+    websocket (1.2.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  allure-rspec
+  appium_lib
+  faker
+  parallel_tests
+  rspec
+  rspec_junit_formatter
+  sauce_whisk
+
+BUNDLED WITH
+   1.11.2

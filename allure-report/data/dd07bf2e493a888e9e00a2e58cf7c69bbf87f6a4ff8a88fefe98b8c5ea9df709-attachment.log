@@ -1,0 +1,32 @@
+14:02:46.815 INFO [1] org.openqa.grid.selenium.GridLauncher - Launching Selenium Grid hub
+14:02:47.578 INFO [1] org.openqa.grid.selenium.GridLauncher - Nodes should register to http://192.168.99.1:4444/grid/register/
+14:02:47.579 INFO [1] org.openqa.grid.selenium.GridLauncher - Selenium Grid hub is up and running
+14:03:01.160 INFO [21] org.openqa.grid.internal.Registry - Registered a node http://127.0.0.1:4000
+14:03:01.381 INFO [24] org.openqa.grid.internal.Registry - Registered a node http://127.0.0.1:4002
+14:03:01.401 INFO [27] org.openqa.grid.internal.Registry - Registered a node http://127.0.0.1:4003
+14:03:01.406 INFO [30] org.openqa.grid.internal.Registry - Registered a node http://127.0.0.1:4001
+14:03:01.417 INFO [33] org.openqa.grid.internal.Registry - Registered a node http://127.0.0.1:4004
+14:03:01.951 INFO [18] org.openqa.grid.web.servlet.handler.RequestHandler - Got a request to create a new session: Capabilities [{app=/Users/justin/repos/appium-mobile-grid/NotesList.apk, platformVersion=4.3, deviceName=android, platformName=ANDROID, appium-version=1.4.16, name=Add Note Scenarios TA64300B9C, udid=TA64300B9C}]
+14:03:01.951 INFO [9] org.openqa.grid.internal.ProxySet - Available nodes: [http://127.0.0.1:4000, http://127.0.0.1:4002, http://127.0.0.1:4003, http://127.0.0.1:4001, http://127.0.0.1:4004]
+14:03:01.952 INFO [9] org.openqa.grid.internal.BaseRemoteProxy - Trying to create a new session on node http://127.0.0.1:4000
+14:03:01.952 INFO [9] org.openqa.grid.internal.TestSlot - Trying to create a new session on test slot {platform=ANDROID, browserName=TA64300B9C, maxInstances=1}
+14:03:02.933 INFO [13] org.openqa.grid.web.servlet.handler.RequestHandler - Got a request to create a new session: Capabilities [{app=/Users/justin/repos/appium-mobile-grid/NotesList.apk, platformVersion=4.3, deviceName=android, platformName=ANDROID, appium-version=1.4.16, name=Add Note Scenarios emulator-5560, udid=emulator-5560}]
+14:03:02.934 INFO [9] org.openqa.grid.internal.ProxySet - Available nodes: [http://127.0.0.1:4002, http://127.0.0.1:4003, http://127.0.0.1:4001, http://127.0.0.1:4004, http://127.0.0.1:4000]
+14:03:02.934 INFO [9] org.openqa.grid.internal.BaseRemoteProxy - Trying to create a new session on node http://127.0.0.1:4002
+14:03:02.934 INFO [9] org.openqa.grid.internal.TestSlot - Trying to create a new session on test slot {platform=ANDROID, browserName=emulator-5558, maxInstances=1}
+14:03:03.049 INFO [14] org.openqa.grid.web.servlet.handler.RequestHandler - Got a request to create a new session: Capabilities [{app=/Users/justin/repos/appium-mobile-grid/NotesList.apk, platformVersion=4.3, deviceName=android, platformName=ANDROID, appium-version=1.4.16, name=Add Note Scenarios emulator-5558, udid=emulator-5558}]
+14:03:03.049 INFO [9] org.openqa.grid.internal.ProxySet - Available nodes: [http://127.0.0.1:4003, http://127.0.0.1:4001, http://127.0.0.1:4004, http://127.0.0.1:4000, http://127.0.0.1:4002]
+14:03:03.051 INFO [9] org.openqa.grid.internal.BaseRemoteProxy - Trying to create a new session on node http://127.0.0.1:4003
+14:03:03.052 INFO [9] org.openqa.grid.internal.TestSlot - Trying to create a new session on test slot {platform=ANDROID, browserName=emulator-5556, maxInstances=1}
+14:03:03.052 INFO [16] org.openqa.grid.web.servlet.handler.RequestHandler - Got a request to create a new session: Capabilities [{app=/Users/justin/repos/appium-mobile-grid/NotesList.apk, platformVersion=4.3, deviceName=android, platformName=ANDROID, appium-version=1.4.16, name=Add Note Scenarios emulator-5554, udid=emulator-5554}]
+14:03:03.053 INFO [9] org.openqa.grid.internal.ProxySet - Available nodes: [http://127.0.0.1:4001, http://127.0.0.1:4004, http://127.0.0.1:4000, http://127.0.0.1:4002, http://127.0.0.1:4003]
+14:03:03.053 INFO [9] org.openqa.grid.internal.BaseRemoteProxy - Trying to create a new session on node http://127.0.0.1:4001
+14:03:03.053 INFO [9] org.openqa.grid.internal.TestSlot - Trying to create a new session on test slot {platform=ANDROID, browserName=emulator-5560, maxInstances=1}
+14:03:03.134 INFO [15] org.openqa.grid.web.servlet.handler.RequestHandler - Got a request to create a new session: Capabilities [{app=/Users/justin/repos/appium-mobile-grid/NotesList.apk, platformVersion=4.3, deviceName=android, platformName=ANDROID, appium-version=1.4.16, name=Add Note Scenarios emulator-5556, udid=emulator-5556}]
+14:03:03.135 INFO [9] org.openqa.grid.internal.ProxySet - Available nodes: [http://127.0.0.1:4004, http://127.0.0.1:4000, http://127.0.0.1:4002, http://127.0.0.1:4003, http://127.0.0.1:4001]
+14:03:03.135 INFO [9] org.openqa.grid.internal.BaseRemoteProxy - Trying to create a new session on node http://127.0.0.1:4004
+14:03:03.135 INFO [9] org.openqa.grid.internal.TestSlot - Trying to create a new session on test slot {platform=ANDROID, browserName=emulator-5554, maxInstances=1}
+14:03:24.451 INFO [18] org.openqa.grid.web.servlet.handler.RequestHandler - Got a request to create a new session: Capabilities [{app=/Users/justin/repos/appium-mobile-grid/NotesList.apk, platformVersion=4.3, deviceName=android, platformName=ANDROID, appium-version=1.4.16, name=Modify Note Scenarios emulator-5558, udid=emulator-5558}]
+14:03:24.452 INFO [9] org.openqa.grid.internal.ProxySet - Available nodes: [http://127.0.0.1:4003, http://127.0.0.1:4000, http://127.0.0.1:4002, http://127.0.0.1:4001, http://127.0.0.1:4004]
+14:03:24.452 INFO [9] org.openqa.grid.internal.BaseRemoteProxy - Trying to create a new session on node http://127.0.0.1:4003
+14:03:24.452 INFO [9] org.openqa.grid.internal.TestSlot - Trying to create a new session on test slot {platform=ANDROID, browserName=emulator-5556, maxInstances=1}

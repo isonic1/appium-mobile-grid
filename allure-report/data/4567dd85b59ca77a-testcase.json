@@ -1,0 +1,47 @@
+{
+  "uid" : "4567dd85b59ca77a",
+  "name" : "Modify Note Scenarios emulator-5558 Delete A Note",
+  "title" : "Modify Note Scenarios emulator-5558 Delete A Note",
+  "time" : {
+    "start" : 1455131012226,
+    "stop" : 1455131031530,
+    "duration" : 19304
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "f39643d84228abd8",
+    "name" : "Modify Note Scenarios emulator-5558",
+    "title" : "Modify Note Scenarios emulator-5558"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "70224561168900"
+  }, {
+    "name" : "host",
+    "value" : "justin-2.home"
+  }, {
+    "name" : "suite-name",
+    "value" : "Modify Note Scenarios emulator-5558"
+  }, {
+    "name" : "suite-title",
+    "value" : "Modify Note Scenarios emulator-5558"
+  }, {
+    "name" : "thread",
+    "value" : "70224561168900"
+  }, {
+    "name" : "host",
+    "value" : "justin-2.home"
+  } ],
+  "parameters" : [ ]
+}
