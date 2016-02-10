@@ -7,7 +7,7 @@ Assumptions:
   * You have npm & Appium installed. https://www.npmjs.com/package/appium
   * You're running this on a mac. Though, this shouldn't be too different to run on other platforms.
   * You have Homebrew installed. http://brew.sh/
-  * You have android emulators installed or connected devices with USB Debug enabled.
+  * You have android emulators installed or USB connected devices with USB Debug enabled.
 
 To set up:
 
@@ -58,7 +58,7 @@ To run specs on SauceLabs:
   
   `rake android[dist,sauce]` << "Will run tests tagged with :sauce distributed"
    
-Generate Allure report:
+Generate Allure report: (Displays test results, hub log, appium log, screenshots and video)
 
   `allure generate report output/allure/*`
   
@@ -66,4 +66,4 @@ Generate Allure report:
 
 Disclaimer:
   * This example was built quickly, so the code is not in the optimal state of dryness.
-  * No page objects were used. The tests are soley for example purposes. :)
+  * No page objects were used. The tests are soley for example purposes.
