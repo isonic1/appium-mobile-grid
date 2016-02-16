@@ -6,8 +6,10 @@ def kill_process process
 end
 
 def get_android_devices
-  devices = (`adb devices`).split("\n").select { |x| x.include? "\tdevice" }.map.each_with_index { |dev,i| { udid: dev.split("\t")[0], thread: i + 1 } }
-  ENV["DEVICES"] = JSON.generate(devices.map { |x| x.merge(get_device_data(x[:udid]))})
+  devs = (`adb devices`).split("\n").select { |x| x.include? "\tdevice" }.map.each_with_index { |dev,i| { udid: dev.split("\t")[0], thread: i + 1 } }
+  devices = devs.map { |x| x.merge(get_device_data(x[:udid]))}
+  ENV["DEVICES"] = JSON.generate(devices)
+  devices
 end
 
 def get_device_data udid
@@ -30,7 +32,8 @@ def save_device_data
   end
 end
 
-def appium_server_start(**options)     
+def appium_server_start(**options)
+  kill_process "appium"
   command = 'appium'
   command << " --nodeconfig #{options[:config]}" if options.key?(:config)
   command << " -p #{options[:port]}" if options.key?(:port)
@@ -51,24 +54,45 @@ end
 #take a screenshot of this..
 def generate_node_config(file_name, udid, appium_port)
   system "mkdir node_configs >> /dev/null 2>&1"
-  f = File.new(Dir.pwd + "/node_configs/#{file_name}", "w")
-  f.write( JSON.generate({ capabilities: [{ browserName: udid, maxInstances: 1, platform: "android" }],
-  configuration: { cleanUpCycle: 2000, timeout: 180000, registerCycle: 5000, proxy: "org.openqa.grid.selenium.proxy.DefaultRemoteProxy", url: "http://127.0.0.1:#{appium_port}/wd/hub",
-  host: "127.0.0.1", port: appium_port, maxSession: 1, register: true, hubPort: 4444, hubHost: "localhost" } } ) )
+  f = File.new("#{Dir.pwd}/node_configs/#{file_name}", "w")
+  f.write( JSON.generate(
+  { capabilities: [{ browserName: udid, maxInstances: 1, platform: "android" }],
+                  configuration: { cleanUpCycle: 2000, 
+                                                 timeout: 180000, 
+                                           registerCycle: 5000, 
+                                                   proxy: "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+                                                     url: "http://127.0.0.1:#{appium_port}/wd/hub",
+                                                    host: "127.0.0.1", 
+                                                    port: appium_port, 
+                                              maxSession: 1, 
+                                                register: true, 
+                                                 hubPort: 4444, 
+                                                hubHost: "localhost" 
+                                            } 
+                            }))
   f.close
 end
 
 def start_hub
   kill_process "selenium"
-  spawn("java -jar selenium-server-standalone-2.47.1.jar -role hub -log #{Dir.pwd}/output/hub.log &", :out=>"/dev/null")
+  spawn("java -jar ../selenium-server-standalone-2.47.1.jar -role hub -log #{Dir.pwd}/output/hub.log &", :out=>"/dev/null")
   sleep 3 #wait for hub to start...
   spawn("open -a safari http://127.0.0.1:4444/grid/console")
 end
 
+def start_single_appium platform
+  case platform
+  when 'android'
+    devices = get_android_devices
+  when 'ios'
+    devices = get_ios_devices
+  end
+  appium_server_start log: "appium-#{devices[0]["udid"]}.log"
+end
+ 
 def launch_hub_and_nodes
-  kill_process "appium" #kill any active hub or nodes...
   start_hub #comment out or remove if you already have a hub running.
-  devices = JSON.parse(get_android_devices)
+  devices = get_android_devices
   save_device_data
   ENV["THREADS"] = devices.size.to_s
   Parallel.map_with_index(devices, in_processes: devices.size) do |device, index|
@@ -76,7 +100,7 @@ def launch_hub_and_nodes
     bp = 2250 + index
     config_name = "#{device["udid"]}.json"
     generate_node_config config_name, device["udid"], port
-    node_config = Dir.pwd + "/node_configs/#{config_name}"
+    node_config = "#{Dir.pwd}/node_configs/#{config_name}"
     appium_server_start config: node_config, port: port, bp: bp, udid: device["udid"], log: "appium-#{device["udid"]}.log", tmp: device["udid"]
   end
 end

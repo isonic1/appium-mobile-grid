@@ -1,0 +1,6 @@
+udid: emulator-5554
+thread: 1
+os: 5.1.1
+manufacturer: unknown
+model: Android SDK built for x86
+sdk: 22
