@@ -1,68 +1,56 @@
-require_relative 'appium_launcher'
+require_relative 'server_launcher'
 
 desc 'Running Android on the grid!'
 task :android, :type, :tag do |t, args|
-  
-  types = ['single', 'dist', 'parallel']
-  unless types.include? args[:type]
-    puts "Invalid run type!\nChoose: #{types}"
-    abort
-  end
-  
-  setup android_app, t.to_s, args
-    
-  case args[:type]
-  when "single"
-    exec "rspec spec #{@tag}"
-  when "dist"
-    exec "SPEC_OPTS='#{@tag}' parallel_rspec #{@threads} spec" 
-  when "parallel"
-    exec "parallel_test #{@threads} -e 'rspec spec #{@tag}'"
-  end
+
+  task_setup android_app, t.to_s, args
 end
 
 desc 'Running iOS on the grid!'
 task :ios, :type, :tag do |t, args|
   
+  task_setup ios_app, t.to_s, args
+end
+
+def task_setup app, platform, args
   types = ['single', 'dist', 'parallel']
   unless types.include? args[:type]
     puts "Invalid run type!\nChoose: #{types}"
     abort
   end
   
-  setup ios_app, t.to_s, args
-    
-  case args[:type]
-  when "single"
-    exec "rspec spec #{@tag}"
-  when "dist"
-    exec "SPEC_OPTS='#{@tag}' parallel_rspec #{@threads} spec" 
-  when "parallel"
-    exec "parallel_test #{@threads} -e 'rspec spec #{@tag}'"
-  end
-end
-
-def setup app, platform, args
   system "mkdir output >> /dev/null 2>&1"
-  clear_old_report_data
+  clear_old_test_data
+
   ENV["BASE_DIR"] = Dir.pwd
-  @tag = "--tag #{args[:tag]}" unless args[:tag].nil?
-  if @tag.nil?
+  ENV["APP_PATH"] = app
+
+  tag = "--tag #{args[:tag]}" unless args[:tag].nil?
+  if tag.nil?
+    ENV['SAUCE_USERNAME'],ENV['SAUCE_ACCESS_KEY'] = nil,nil
     if args[:type] == "single"
       start_single_appium platform
     elsif ['dist', 'parallel'].include? args[:type]
-      launch_hub_and_nodes
-    end 
-    @threads = "-n #{ENV["THREADS"]}"
-    ENV['SAUCE_USERNAME'],ENV['SAUCE_ACCESS_KEY'] = nil,nil
-    ENV["SERVER_URL"] = "http://localhost:4444/wd/hub" #Change this to your hub url if different.
-    ENV["APP_PATH"] = app
-  elsif @tag == "sauce"
+      launch_hub_and_nodes platform 
+      threads = "-n #{ENV["THREADS"]}"
+      ENV["SERVER_URL"] = "http://localhost:4444/wd/hub" #Change this to your hub url if different.
+    end
+  elsif tag == "sauce"
     ENV["ENV"] = "sauce"
     ENV["SERVER_URL"] = "http://#{ENV['SAUCE_USERNAME']}:#{ENV['SAUCE_ACCESS_KEY']}@ondemand.saucelabs.com:80/wd/hub"
     upload_app_to_sauce app
   end
+  
   Dir.chdir platform
+  
+  case args[:type]
+  when "single"
+    exec "rspec spec #{tag}"
+  when "dist"
+    exec "SPEC_OPTS='#{tag}' parallel_rspec #{threads} spec" 
+  when "parallel"
+    exec "parallel_test #{threads} -e 'rspec spec #{tag}'"
+  end
 end
 
 def android_app
@@ -81,7 +69,7 @@ def upload_app_to_sauce app
   ENV["APP_PATH"] = "sauce-storage:#{File.basename(app)}"
 end
 
-def clear_old_report_data
+def clear_old_test_data
   `/bin/rm -rf ./output/allure/* >> /dev/null 2>&1`
   `rm ./output/*  >> /dev/null 2>&1`
 end

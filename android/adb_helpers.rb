@@ -26,11 +26,11 @@ module Adb
       return if ENV["UDID"].include? "emulator"
       kill_adb_pid ENV["VIDEO_PID"]
       sleep 5 #delay for video to complete processing on device...
-      spawn "adb -s #{udid} pull /sdcard/recordings/video-#{name}.mp4 ./output"
+      spawn "adb -s #{udid} pull /sdcard/recordings/video-#{name}.mp4 #{ENV["BASE_DIR"]}/output"
     end
   
     def start_logcat udid, name
-      pid = spawn("adb -s #{udid} logcat -v long", :out=>"./output/logcat-#{name}.log")
+      pid = spawn("adb -s #{udid} logcat -v long", :out=>"#{ENV["BASE_DIR"]}/output/logcat-#{name}.log")
       ENV["LOGCAT_PID"] = pid.to_s
     end
   

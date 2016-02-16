@@ -9,7 +9,7 @@ def thread
 end
 
 def assign_udid_from_thread
-  ENV["UDID"] = JSON.parse(ENV["DEVICES"]).find { |t| t["thread"].eql? thread }["udid"] unless ENV["ENV"] == "sauce"
+  JSON.parse(ENV["DEVICES"]).find { |t| t["thread"].eql? thread }["udid"] unless ENV["ENV"] == "sauce"
 end
 
 def allure_setup
