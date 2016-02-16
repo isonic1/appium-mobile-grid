@@ -6,7 +6,28 @@ def kill_process process
 end
 
 def get_android_devices
-  ENV["DEVICES"] = JSON.generate((`adb devices`).lines.select { |line| line.match(/\tdevice$/) }.map.each_with_index { |line, index| { udid: line.split("\t")[0], thread: index + 1 } })
+  devices = (`adb devices`).split("\n").select { |x| x.include? "\tdevice" }.map.each_with_index { |dev,i| { udid: dev.split("\t")[0], thread: i + 1 } }
+  ENV["DEVICES"] = JSON.generate(devices.map { |x| x.merge(get_device_data(x[:udid]))})
+end
+
+def get_device_data udid
+  specs = { os: "ro.build.version.release", manufacturer: "ro.product.manufacturer", model: "ro.product.model", sdk: "ro.build.version.sdk" }
+  hash = {}
+  specs.each do |key, spec|
+    value = `adb -s #{udid} shell getprop "#{spec}"`.strip
+    hash.merge!({key=> "#{value}"})
+  end
+  hash
+end
+
+def save_device_data
+  JSON.parse(ENV["DEVICES"]).each do |device|
+    device.each do |k,v|
+      open("output/specs-#{device["udid"]}.txt", 'a') do |file|
+        file << "#{k}: #{v}\n"
+      end
+    end
+  end
 end
 
 def appium_server_start(**options)     
@@ -27,6 +48,7 @@ def appium_server_start(**options)
   }
 end
 
+#take a screenshot of this..
 def generate_node_config(file_name, udid, appium_port)
   system "mkdir node_configs >> /dev/null 2>&1"
   f = File.new(Dir.pwd + "/node_configs/#{file_name}", "w")
@@ -47,6 +69,7 @@ def launch_hub_and_nodes
   kill_process "appium" #kill any active hub or nodes...
   start_hub #comment out or remove if you already have a hub running.
   devices = JSON.parse(get_android_devices)
+  save_device_data
   ENV["THREADS"] = devices.size.to_s
   Parallel.map_with_index(devices, in_processes: devices.size) do |device, index|
     port = 4000 + index
