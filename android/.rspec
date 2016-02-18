@@ -1,0 +1,7 @@
+--color
+-p
+--require=./spec/spec_helper.rb
+--order random
+--format documentation
+--format html 
+--out output/rspec.html

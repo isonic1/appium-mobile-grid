@@ -2,13 +2,11 @@ require_relative 'server_launcher'
 
 desc 'Running Android on the grid!'
 task :android, :type, :tag do |t, args|
-
   task_setup android_app, t.to_s, args
 end
 
 desc 'Running iOS on the grid!'
 task :ios, :type, :tag do |t, args|
-  
   task_setup ios_app, t.to_s, args
 end
 
@@ -22,8 +20,7 @@ def task_setup app, platform, args
   system "mkdir output >> /dev/null 2>&1"
   clear_old_test_data
 
-  ENV["BASE_DIR"] = Dir.pwd
-  ENV["APP_PATH"] = app
+  ENV["BASE_DIR"], ENV["APP_PATH"] = Dir.pwd, app
 
   tag = "--tag #{args[:tag]}" unless args[:tag].nil?
   if tag.nil?
@@ -58,7 +55,7 @@ def android_app
 end
 
 def ios_app
-  "#{Dir.pwd}/android/NotesList.apk"
+  "#{Dir.pwd}/ios/TestApp/build/Release-iphoneos/TestApp.app.zip"
 end
 
 def upload_app_to_sauce app

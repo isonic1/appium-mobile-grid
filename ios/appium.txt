@@ -1,0 +1,6 @@
+[caps]
+appium-version = "1.4.16"
+platformName = "iOS"
+
+[appium_lib]
+wait = 30

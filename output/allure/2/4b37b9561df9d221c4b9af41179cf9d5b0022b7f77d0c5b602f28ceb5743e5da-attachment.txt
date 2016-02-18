@@ -1,0 +1,7 @@
+udid: 569cfe862065302d936177a807f5874af90dbe61
+thread: 2
+type: iPhone
+name: iPhone
+arc: armv7s
+sdk: iPhone5,2
+os: 9.1
