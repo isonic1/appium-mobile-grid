@@ -1,7 +1,0 @@
-udid: d4605c833bf60c2699b220c95ad67d12fb5cfc23
-thread: 1
-type: iPhone
-name: Justin iPhone 6
-arc: arm64
-sdk: iPhone7,2
-os: 9.2.1

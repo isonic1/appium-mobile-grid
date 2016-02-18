@@ -2,7 +2,7 @@ require 'parallel'
 require 'json'
 
 def get_android_devices
-  devs = (`adb devices`).split("\n").select { |x| x.include? "\tdevice" }.map.each_with_index { |d,i| { udid: d.split("\t")[0], thread: i + 1 } }
+  devs = (`adb devices`).split("\n").select { |x| x.include? "\tdevice" }.map.each_with_index { |d,i| { name: "android", udid: d.split("\t")[0], thread: i + 1 } }
   devices = devs.map { |x| x.merge(get_android_device_data(x[:udid]))}
   ENV["DEVICES"] = JSON.generate(devices)
   devices
