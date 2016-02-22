@@ -3,11 +3,12 @@
 ## Getting Started
 
 Assumptions:
-  * You have AndroidStudios installed.
+  * You have AndroidStudios and Xcode installed.
+  * You have Xcode command line tools installed.
   * You have npm & Appium installed. https://www.npmjs.com/package/appium
-  * You're running this on a mac. Though, this shouldn't be too different to run on other platforms.
+  * You're running this on a Mac. (For iOS tests only.) 
   * You have Homebrew installed. http://brew.sh/
-  * You have ideviceinstaller installed. `brew install ideviceinstaller`
+  * You have ideviceinstaller installed for iOS test. `brew install ideviceinstaller`
   * You have android emulators installed or USB connected devices with USB Debug enabled.
 
 To set up:
@@ -74,12 +75,18 @@ Generate Allure report: (Displays test results, hub log, appium log, screenshots
 
 ## iOS debugging:
   * There could be times when the tests hang on iOS. This is most likely due to a pairing issue with ideviceinstaller.
+  
   `idevicepair -u <udid> unpair`
+  
   `idevicepair -u <udid> pair`
+  
   * Accept the "Trust this computer" popup on the device.
+  
   `idevicepair -u <udid> validate`
+  
   * Make sure you get "SUCCESS: Validated pairing with device <udid>"
   * You should now be able to install the app manually.
+  
   `ideviceinstaller -u <udid> -i ./appium-mobile-grid/ios/TestApp/build/Release-iphoneos/TestApp.app`
 
 Disclaimer:
