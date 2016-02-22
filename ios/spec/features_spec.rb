@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Validate Test App Features #{ENV["UDID"]}" do
   
-  it 'Compute Sum', :sauce do
+  it 'Compute Sum' do
     a = rand(99); b = rand(99)
     find_element(:id, "IntegerA").type a
     find_element(:id, "IntegerB").type b

@@ -4,7 +4,7 @@ Bundler.require(:test)
 include Faker
 
 def update_sauce_status job_id, status
-  return unless ENV["ENV"].eql? "sauce"
+  return unless ENV["ENV"] == "sauce"
   job = SauceWhisk::Jobs
   job.change_status job_id, status
 end
@@ -14,26 +14,37 @@ def thread
 end
 
 def get_device_data
-  JSON.parse(ENV["DEVICES"]).find { |t| t["thread"].eql? thread } unless ENV["ENV"] == "sauce"
+  unless ENV["ENV"] == "sauce"
+    JSON.parse(ENV["DEVICES"]).find { |t| t["thread"].eql? thread }
+  else
+    {}
+  end
 end
 
-def initialize_appium_and_methods appium_file
-  device_data = get_device_data
-  caps = Appium.load_appium_txt file: File.join(File.dirname(__FILE__), appium_file)
-  caps[:caps][:udid] = device_data["udid"]
-  caps[:caps][:platformVersion] = device_data["os"]
-  caps[:caps][:deviceName] = device_data["name"]
+def set_udid_environment_variable
+  return if ENV["ENV"] == "sauce"
+  ENV["UDID"] = get_device_data["udid"]
+end
+
+def initialize_appium_and_methods platform
+  device = get_device_data 
+  caps = Appium.load_appium_txt file: File.join(File.dirname(__FILE__), "../#{platform}/appium.txt")
+  caps[:caps][:udid] = device.fetch("udid", nil)
+  caps[:caps][:platformVersion] = device.fetch("os", nil)
+  caps[:caps][:deviceName] = device.fetch("name", platform)
   caps[:caps][:app] = ENV["APP_PATH"]
   caps[:appium_lib][:server_url] = ENV["SERVER_URL"]
-  caps[:caps][:name] = self.class.metadata[:full_description] #for sauce labs
+  caps[:caps][:name] = self.class.metadata[:full_description] #for sauce labs test description
   @driver = Appium::Driver.new(caps).start_driver
-  
   Appium.promote_appium_methods Object
   Appium.promote_appium_methods RSpec::Core::ExampleGroup
+  require_relative "../#{platform}/helpers"
+  Appium.promote_singleton_appium_methods Helpers
 end
 
-def attach_report_files example, platform
-  example.attach_file("Hub Log: #{ENV["UDID"]}", File.new("#{ENV["BASE_DIR"]}/output/#{platform}-hub.log")) unless ENV["THREADS"].nil?
+def attach_report_files example
+  return if ENV["ENV"] == "sauce"
+  example.attach_file("Hub Log: #{ENV["UDID"]}", File.new("#{ENV["BASE_DIR"]}/output/hub.log")) unless ENV["THREADS"].nil?
   @driver.screenshot "#{ENV["BASE_DIR"]}/output/screenshot-#{ENV["UDID"]}.png"
   files = (`ls #{ENV["BASE_DIR"]}/output/*#{ENV["UDID"]}*`).split("\n").map { |file| { name: file.match(/output\/(.*)-/)[1], file: file } }
   files.each { |file| example.attach_file(file[:name], File.new(file[:file])) } unless files.empty?

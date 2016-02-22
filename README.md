@@ -7,6 +7,7 @@ Assumptions:
   * You have npm & Appium installed. https://www.npmjs.com/package/appium
   * You're running this on a mac. Though, this shouldn't be too different to run on other platforms.
   * You have Homebrew installed. http://brew.sh/
+  * You have ideviceinstaller installed. `brew install ideviceinstaller`
   * You have android emulators installed or USB connected devices with USB Debug enabled.
 
 To set up:
@@ -38,13 +39,20 @@ To set up:
 
 * Start emulators or connect devices!
 
+To run specs single threaded:
+
+  `rake android[single]`
+  `rake ios[single]`
+	
 To run specs in parallel: 
 
   `rake android[parallel]`
+  `rake ios[parallel]`
  
 To run specs distributed:
 
   `rake android[dist]`
+  `rake ios[dist]`
 
 To run specs on SauceLabs:
   * Goto saucelabs.com and signup.
@@ -53,16 +61,26 @@ To run specs on SauceLabs:
   `export SAUCE_USERNAME=<user sauce user_id>`
   
   `export SAUCE_ACCESS_KEY=<your sauce access key>`
-
-  `rake android[parallel,sauce]` << "Will run tests tagged with :sauce in parallel"
+	  
+  `rake android/ios[single,sauce]` << "Will run tests tagged with :sauce single threaded"
   
-  `rake android[dist,sauce]` << "Will run tests tagged with :sauce distributed"
+  `rake android/ios[dist,sauce]` << "Will run tests tagged with :sauce distributed"
    
 Generate Allure report: (Displays test results, hub log, appium log, screenshots and video)
 
   `allure generate report output/allure/*`
   
   `allure report open`
+
+## iOS debugging:
+  * There could be times when the tests hang on iOS. This is most likely due to a pairing issue with ideviceinstaller.
+  `idevicepair -u <udid> unpair`
+  `idevicepair -u <udid> pair`
+  * Accept the "Trust this computer" popup on the device.
+  `idevicepair -u <udid> validate`
+  * Make sure you get "SUCCESS: Validated pairing with device <udid>"
+  * You should now be able to install the app manually.
+  `ideviceinstaller -u <udid> -i ./appium-mobile-grid/ios/TestApp/build/Release-iphoneos/TestApp.app`
 
 Disclaimer:
   * This example was built quickly, so the code is not in the optimal state of dryness.

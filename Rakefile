@@ -1,11 +1,11 @@
 require_relative 'server_launcher'
 
-desc 'Running Android on the grid!'
+desc 'Running Android tests!'
 task :android, :type, :tag do |t, args|
   task_setup android_app, t.to_s, args
 end
 
-desc 'Running iOS on the grid!'
+desc 'Running iOS tests!'
 task :ios, :type, :tag do |t, args|
   task_setup ios_app, t.to_s, args
 end
@@ -32,10 +32,14 @@ def task_setup app, platform, args
       threads = "-n #{ENV["THREADS"]}"
       ENV["SERVER_URL"] = "http://localhost:4444/wd/hub" #Change this to your hub url if different.
     end
-  elsif tag == "sauce"
-    ENV["ENV"] = "sauce"
-    ENV["SERVER_URL"] = "http://#{ENV['SAUCE_USERNAME']}:#{ENV['SAUCE_ACCESS_KEY']}@ondemand.saucelabs.com:80/wd/hub"
-    upload_app_to_sauce app
+  elsif tag.include? "sauce"
+    if platform == "ios"
+      puts "Sorry, this example is not setup to run iOS on sauce labs. Android only...\n"
+      return
+    else
+      ENV["ENV"], ENV["SERVER_URL"] = "sauce","http://#{ENV['SAUCE_USERNAME']}:#{ENV['SAUCE_ACCESS_KEY']}@ondemand.saucelabs.com:80/wd/hub"
+      upload_app_to_sauce app
+    end
   end
   
   Dir.chdir platform
@@ -61,7 +65,7 @@ end
 def upload_app_to_sauce app
   require 'sauce_whisk'
   storage = SauceWhisk::Storage.new
-  puts "uploading #{app} to saucelabs..."
+  puts "Uploading #{app} to saucelabs...\n"
   storage.upload app
   ENV["APP_PATH"] = "sauce-storage:#{File.basename(app)}"
 end
