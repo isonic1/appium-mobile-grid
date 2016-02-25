@@ -3,7 +3,7 @@ require 'bundler'
 Bundler.require(:test)
 include Faker
 
-def update_sauce_status job_id, status
+def update_sauce_status_get_assets job_id, status
   return unless ENV["ENV"] == "sauce"
   job = SauceWhisk::Jobs
   job.change_status job_id, status
@@ -30,11 +30,11 @@ def initialize_appium_and_methods platform
   device = get_device_data 
   caps = Appium.load_appium_txt file: File.join(File.dirname(__FILE__), "../#{platform}/appium.txt")
   caps[:caps][:udid] = device.fetch("udid", nil)
-  caps[:caps][:platformVersion] = device.fetch("os", nil)
-  caps[:caps][:deviceName] = device.fetch("name", platform)
+  caps[:caps][:platformVersion] = device.fetch("os", caps[:caps][:platformVersion])
+  caps[:caps][:deviceName] = device.fetch("name", caps[:caps][:deviceName])
   caps[:caps][:app] = ENV["APP_PATH"]
   caps[:appium_lib][:server_url] = ENV["SERVER_URL"]
-  caps[:caps][:name] = self.class.metadata[:full_description] #for sauce labs test description
+  caps[:caps][:name] = self.class.metadata[:full_description].strip #for sauce labs test description
   @driver = Appium::Driver.new(caps).start_driver
   Appium.promote_appium_methods Object
   Appium.promote_appium_methods RSpec::Core::ExampleGroup

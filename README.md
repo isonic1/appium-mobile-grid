@@ -6,9 +6,11 @@ Assumptions:
   * You have AndroidStudios and Xcode installed.
   * You have Xcode command line tools installed.
   * You have npm & Appium installed. https://www.npmjs.com/package/appium
-  * You're running this on a Mac. (For iOS tests only.) 
+  * You followed the Appium setup instructions http://appium.io/slate/en/1.5/?ruby#setup for android & iOS.
+  * You're running this on a Mac for iOS. For android, you can run on Windows and Linux with some tweaking. 
   * You have Homebrew installed. http://brew.sh/
-  * You have ideviceinstaller installed for iOS test. `brew install ideviceinstaller`
+  * You have ideviceinstaller installed for iOS tests. `brew install ideviceinstaller`
+  * You have enabled UI Automation in Settings > Developer for iOS.
   * You have android emulators installed or USB connected devices with USB Debug enabled.
 
 To set up:
@@ -38,7 +40,8 @@ To set up:
 
 ## Running Specs
 
-* Start emulators or connect devices!
+* Start android emulators or connect devices!
+* iOS is setup to only run on real devices. This is due to Apple's limitation of allowing only one running emulator per machine. 
 
 To run specs single threaded:
 
@@ -63,9 +66,9 @@ To run specs on SauceLabs:
   
   `export SAUCE_ACCESS_KEY=<your sauce access key>`
 	  
-  `rake android/ios[single,sauce]` << "Will run tests tagged with :sauce single threaded"
+  `rake android/ios[single,sauce]` <- "Will run tests tagged with :sauce single threaded"
   
-  `rake android/ios[dist,sauce]` << "Will run tests tagged with :sauce distributed"
+  `rake android/ios[dist,sauce]` <- "Will run tests tagged with :sauce distributed"
    
 Generate Allure report: (Displays test results, hub log, appium log, screenshots and video)
 
@@ -87,8 +90,16 @@ Generate Allure report: (Displays test results, hub log, appium log, screenshots
   * Make sure you get "SUCCESS: Validated pairing with device <udid>"
   * You should now be able to install the app manually.
   
+  `ideviceinstaller -u <udid> -i ./appium-mobile-grid/ios/TestApp/build/Release-iphoneos/TestApp.app.zip`
+	  
+  * Build the app with xcodebuild
+  
+  `cd ios/TestApp`
+  
+  `xcodebuild -sdk iphoneos` <- This will place a new binary in appium-mobile-grid/ios/TestApp/build/Release-iphoneos
+  
   `ideviceinstaller -u <udid> -i ./appium-mobile-grid/ios/TestApp/build/Release-iphoneos/TestApp.app`
 
-Disclaimer:
+## Disclaimer:
   * This example was built quickly, so the code is not in the optimal state of dryness.
   * No page objects were used. The tests are soley for example purposes.

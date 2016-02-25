@@ -12,7 +12,7 @@ describe "Validate Test App Features #{ENV["UDID"]}" do
   
   it 'Slide Slidder' do
     slider = find_element(:class, "UIASlider")
-    Appium::TouchAction.new.press(element: slider, x: 60, y: 3).move_to(element: slider, x: 130, y: 3).release.perform
+    Appium::TouchAction.new.press(element: slider, x: 60, y: 3).move_to(element: slider, x: 150, y: 3).release.perform
     expect(slider.value).to eq "100%"
   end
 end

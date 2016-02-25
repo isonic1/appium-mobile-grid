@@ -22,7 +22,7 @@ RSpec.configure do |config|
       helper.stop_logcat
       helper.stop_video_record ENV["UDID"]
     end
-    update_sauce_status @driver.session_id, e.exception.nil?     
+    update_sauce_status_get_assets @driver.session_id, e.exception.nil? 
     unless e.exception.nil?
       attach_report_files e
     end

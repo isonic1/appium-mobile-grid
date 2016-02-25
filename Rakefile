@@ -7,7 +7,13 @@ end
 
 desc 'Running iOS tests!'
 task :ios, :type, :tag do |t, args|
-  task_setup ios_app, t.to_s, args
+  
+  # if args[:tag].include? "sauce"
+  #   app = ios_app_sauce
+  # else
+    app = ios_app
+    #end
+  task_setup app, t.to_s, args
 end
 
 def task_setup app, platform, args
@@ -17,8 +23,7 @@ def task_setup app, platform, args
     abort
   end
   
-  system "mkdir output >> /dev/null 2>&1"
-  clear_old_test_data
+  setup_output_dir
 
   ENV["BASE_DIR"], ENV["APP_PATH"] = Dir.pwd, app
 
@@ -33,13 +38,8 @@ def task_setup app, platform, args
       ENV["SERVER_URL"] = "http://localhost:4444/wd/hub" #Change this to your hub url if different.
     end
   elsif tag.include? "sauce"
-    if platform == "ios"
-      puts "Sorry, this example is not setup to run iOS on sauce labs. Android only...\n"
-      return
-    else
-      ENV["ENV"], ENV["SERVER_URL"] = "sauce","http://#{ENV['SAUCE_USERNAME']}:#{ENV['SAUCE_ACCESS_KEY']}@ondemand.saucelabs.com:80/wd/hub"
-      upload_app_to_sauce app
-    end
+    ENV["ENV"], ENV["SERVER_URL"] = "sauce","http://#{ENV['SAUCE_USERNAME']}:#{ENV['SAUCE_ACCESS_KEY']}@ondemand.saucelabs.com:80/wd/hub"
+    upload_app_to_sauce app
   end
   
   Dir.chdir platform
@@ -62,6 +62,10 @@ def ios_app
   "#{Dir.pwd}/ios/TestApp/build/Release-iphoneos/TestApp.app.zip"
 end
 
+def ios_app_sauce
+  "#{Dir.pwd}/ios/TestApp/build/Release-iphonesimulator/TestApp.app.zip"
+end
+
 def upload_app_to_sauce app
   require 'sauce_whisk'
   storage = SauceWhisk::Storage.new
@@ -70,7 +74,8 @@ def upload_app_to_sauce app
   ENV["APP_PATH"] = "sauce-storage:#{File.basename(app)}"
 end
 
-def clear_old_test_data
+def setup_output_dir
+   system "mkdir output >> /dev/null 2>&1"
   `/bin/rm -rf ./output/allure/* >> /dev/null 2>&1`
   `rm ./output/*  >> /dev/null 2>&1`
 end

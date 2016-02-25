@@ -11,6 +11,7 @@ RSpec.configure do |config|
   end
   
   config.after :each do |e|
+    update_sauce_status @driver.session_id, e.exception.nil? 
     unless e.exception.nil?
       attach_report_files e
     end
