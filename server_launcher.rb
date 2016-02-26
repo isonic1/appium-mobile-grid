@@ -9,7 +9,7 @@ def get_android_devices
 end
 
 def get_android_device_data udid
-  specs = { platform: "ios", os: "ro.build.version.release", manufacturer: "ro.product.manufacturer", model: "ro.product.model", sdk: "ro.build.version.sdk" }
+  specs = { os: "ro.build.version.release", manufacturer: "ro.product.manufacturer", model: "ro.product.model", sdk: "ro.build.version.sdk" }
   hash = {}
   specs.each do |key, spec|
     value = `adb -s #{udid} shell getprop "#{spec}"`.strip
