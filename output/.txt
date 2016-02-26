@@ -1,0 +1,60 @@
+thread: 1
+os: 6.0
+manufacturer: unknown
+model: Android SDK built for x86
+sdk: 23
+thread: 2
+os: 5.0.2
+manufacturer: unknown
+model: Android SDK built for x86
+sdk: 21
+thread: 3
+os: 5.1.1
+manufacturer: unknown
+model: Android SDK built for x86
+sdk: 22
+thread: 4
+os: 4.4.4
+manufacturer: unknown
+model: Android SDK built for x86
+sdk: 19
+thread: 5
+os: 4.2.2
+manufacturer: unknown
+model: Android SDK built for x86
+sdk: 17
+thread: 6
+os: 4.3.1
+manufacturer: unknown
+model: Android SDK built for x86
+sdk: 18
+thread: 1
+os: 6.0
+manufacturer: unknown
+model: Android SDK built for x86
+sdk: 23
+thread: 2
+os: 5.0.2
+manufacturer: unknown
+model: Android SDK built for x86
+sdk: 21
+thread: 3
+os: 5.1.1
+manufacturer: unknown
+model: Android SDK built for x86
+sdk: 22
+thread: 4
+os: 4.4.4
+manufacturer: unknown
+model: Android SDK built for x86
+sdk: 19
+thread: 5
+os: 4.2.2
+manufacturer: unknown
+model: Android SDK built for x86
+sdk: 17
+thread: 6
+os: 4.3.1
+manufacturer: unknown
+model: Android SDK built for x86
+sdk: 18

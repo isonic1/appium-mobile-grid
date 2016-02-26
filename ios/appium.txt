@@ -1,0 +1,8 @@
+[caps]
+appium-version = "1.4.16"
+platformName = "iOS"
+platformVersion = "9.2"
+deviceName = "iPhone Simulator"
+
+[appium_lib]
+wait = 30

@@ -3,13 +3,14 @@ require 'spec_helper'
 describe "Modify Note Scenarios #{ENV["UDID"]}" do
   
   before :each do
-    wait_true { find_element(:id, 'android:id/action_bar_title').text.eql? "Notes" }
+    wait_true { find_element(:id, 'android:id/action_bar_title').text == "Notes" }
     find_element(:id, 'com.example.android.notepad:id/menu_add').click
-    wait_true { find_element(:id, "android:id/action_bar_title").text.eql? "New note" }
+    wait_true { find_element(:id, "android:id/action_bar_title").text == "New note" }
     @note = Lorem.sentence
     find_element(:id, 'com.example.android.notepad:id/note').send_keys @note
+    sleep 5
     find_element(:id, 'com.example.android.notepad:id/menu_save').click
-    wait_true { find_element(:id, "android:id/action_bar_title").text.eql? "Notes" }
+    wait_true { find_element(:id, "android:id/action_bar_title").text == "Notes" }
   end
     
   it 'Delete A Note', sauce: false do
