@@ -96,9 +96,11 @@ Generate Allure report: (Displays test results, hub log, appium log, screenshots
   
   `cd ios/TestApp`
   
-  `xcodebuild -sdk iphoneos` <- This will place a new binary in appium-mobile-grid/ios/TestApp/build/Release-iphoneos
+  `xcodebuild -sdk iphoneos` <- ./build/Release-iphoneos/TeatApp.app
   
-  `ideviceinstaller -u <udid> -i ./appium-mobile-grid/ios/TestApp/build/Release-iphoneos/TestApp.app`
+  `zip -r TestApp.app.zip TestApp.app` <- zip the new binary
+  
+  `ideviceinstaller -u <udid> -i ./build/Release-iphoneos/TestApp.app`
 
 ## Disclaimer:
   * This example was built quickly, so the code is not in the optimal state of dryness.

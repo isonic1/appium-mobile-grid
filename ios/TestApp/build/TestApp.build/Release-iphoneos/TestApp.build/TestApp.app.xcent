@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>2L4NQN3NU9.io.appium.TestApp</string>
+	<string>ZDZHKZ68DE.io.appium.TestApp</string>
 	<key>com.apple.developer.team-identifier</key>
-	<string>2L4NQN3NU9</string>
+	<string>QA2G25RMZ4</string>
 	<key>get-task-allow</key>
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>2L4NQN3NU9.io.appium.TestApp</string>
+		<string>ZDZHKZ68DE.io.appium.TestApp</string>
 	</array>
 </dict>
 </plist>

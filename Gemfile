@@ -8,4 +8,6 @@ group :test do
   gem 'faker'
   gem 'allure-rspec'
   gem 'sauce_whisk'
+  gem 'flick'
+  gem 'rake'
 end

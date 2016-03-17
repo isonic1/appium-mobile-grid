@@ -153,6 +153,11 @@
 			attributes = {
 				CLASSPREFIX = TA2;
 				LastUpgradeCheck = 0460;
+				TargetAttributes = {
+					3647AE0D15CA0082006F70D6 = {
+						DevelopmentTeam = QA2G25RMZ4;
+					};
+				};
 			};
 			buildConfigurationList = 3647AE0815CA0082006F70D6 /* Build configuration list for PBXProject "TestApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -284,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Test App 2/TestApp-Prefix.pch";
 				INFOPLIST_FILE = "Test App 2/TestApp-Info.plist";
@@ -298,6 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Test App 2/TestApp-Prefix.pch";
 				INFOPLIST_FILE = "Test App 2/TestApp-Info.plist";

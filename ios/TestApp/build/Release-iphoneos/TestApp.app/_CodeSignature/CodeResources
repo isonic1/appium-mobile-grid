@@ -10,11 +10,11 @@
 		</data>
 		<key>GestureTestViewController.nib/objects.nib</key>
 		<data>
-		7LDB0Duzk739rHCpsPaoq8iTZFY=
+		IC2HkqKjH/VTksokgz8kMLjEXLE=
 		</data>
 		<key>GestureTestViewController.nib/runtime.nib</key>
 		<data>
-		bGcbxpseenEib767nqVmOaZL1XU=
+		9XQbqZjD35NgiOnUB/9+/r6A20g=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		+b9dq7YdgS7KMlKPsSY21LgKH4s=
+		b0LhrNCJVS0uDNbD+LT6wKndHnE=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<dict>
@@ -50,7 +50,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6q8863bi9fHijEWqYFnBSbBTFeA=
+			HeNfGae6gw0gfd0UDWerVp2D1Xk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -59,7 +59,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SAjuIeWeTGDDu4G8qfajqzipxhg=
+			F5lLRIsA9WypYUNXKTx+Z/4GJ/g=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -73,15 +73,15 @@
 		</data>
 		<key>GestureTestViewController.nib/objects.nib</key>
 		<data>
-		7LDB0Duzk739rHCpsPaoq8iTZFY=
+		IC2HkqKjH/VTksokgz8kMLjEXLE=
 		</data>
 		<key>GestureTestViewController.nib/runtime.nib</key>
 		<data>
-		bGcbxpseenEib767nqVmOaZL1XU=
+		9XQbqZjD35NgiOnUB/9+/r6A20g=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		+b9dq7YdgS7KMlKPsSY21LgKH4s=
+		b0LhrNCJVS0uDNbD+LT6wKndHnE=
 		</data>
 		<key>en.lproj/InfoPlist.strings</key>
 		<dict>
@@ -105,7 +105,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6q8863bi9fHijEWqYFnBSbBTFeA=
+			HeNfGae6gw0gfd0UDWerVp2D1Xk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -114,7 +114,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SAjuIeWeTGDDu4G8qfajqzipxhg=
+			F5lLRIsA9WypYUNXKTx+Z/4GJ/g=
 			</data>
 			<key>optional</key>
 			<true/>

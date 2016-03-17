@@ -1,9 +1,8 @@
-require 'json'
 require 'bundler'
 Bundler.require(:test)
 include Faker
 
-def update_sauce_status_get_assets job_id, status
+def update_sauce_status job_id, status
   return unless ENV["ENV"] == "sauce"
   job = SauceWhisk::Jobs
   job.change_status job_id, status
