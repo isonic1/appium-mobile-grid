@@ -12,15 +12,15 @@ RSpec.configure do |config|
   
   config.before :each do
     unless ENV["ENV"] == "sauce"
-      helper.start_logcat ENV["UDID"]
-      %x(flick start -p android -u #{ENV["UDID"]})
+      `flick log -a start -p android -u #{ENV["UDID"]} -o #{ENV["BASE_DIR"]}/output -n log-#{ENV["UDID"]}`
+      `flick video -a start -p android -u #{ENV["UDID"]}`
     end
   end
     
   config.after :each do |e|
     unless ENV["ENV"] == "sauce"
-      `flick stop -p android -u #{ENV["UDID"]} -o #{ENV["BASE_DIR"]}/output -n video-#{ENV["UDID"]}`
-      helper.stop_logcat
+      `flick log -a stop -p android -u #{ENV["UDID"]}`
+      `flick video -a stop -p android -u #{ENV["UDID"]} -o #{ENV["BASE_DIR"]}/output -n video-#{ENV["UDID"]}`
     end
     update_sauce_status @driver.session_id, e.exception.nil? 
     attach_report_files e
