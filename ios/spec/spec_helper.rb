@@ -19,7 +19,7 @@ RSpec.configure do |config|
   
   config.after :each do |e|
     unless ENV["ENV"] == "sauce"
-      `flick log -a stop -p android -u #{ENV["UDID"]}`
+      `flick log -a stop -p ios -u #{ENV["UDID"]}`
       `flick video -a stop -p ios -u #{ENV["UDID"]} -o #{ENV["BASE_DIR"]}/output -n video-#{ENV["UDID"]}`
     end
     update_sauce_status @driver.session_id, e.exception.nil? 
