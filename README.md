@@ -102,8 +102,9 @@ Generate Allure report: (Displays test results, hub log, appium log, screenshots
 
 ## Capture Metadata
 	`gem install flick`
-	* See [here](https://github.com/isonic1/flick) for more details.
-	* Also see [here](https://github.com/isonic1/appium-mobile-grid/blob/flick/android/spec/spec_helper.rb#L15-L16) for example of implementation.
+	
+  * See [here](https://github.com/isonic1/flick) for more details.
+  * Also see [here](https://github.com/isonic1/appium-mobile-grid/blob/flick/android/spec/spec_helper.rb#L15-L16) for example of implementation.
 
 ## Disclaimer:
   * This example was built quickly, so the code is not in the optimal state of dryness.
