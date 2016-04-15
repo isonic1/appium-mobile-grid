@@ -7,12 +7,7 @@ end
 
 desc 'Running iOS tests!'
 task :ios, :type, :tag do |t, args|
-  
-  # if args[:tag].include? "sauce"
-  #   app = ios_app_sauce
-  # else
-    app = ios_app
-    #end
+  app = ios_app
   task_setup app, t.to_s, args
 end
 
